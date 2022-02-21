@@ -79,11 +79,11 @@
     @foreach($todos as $todo)
     <tr>
         <td class='date-item'>{{$todo->created_at}}</td>
-        <td>
-            <input type="text"  name='content' value='{{ $todo->content }}' class='task-item'>
-        </td>
         <form method="post" action="{{ route('todo.update') }}">
         @csrf
+            <td>
+                <input type="text"  name='content' value='{{ $todo->content }}' class='task-item'>
+            </td>
             <input type='hidden' name='id' value='{{ $todo->id }}'>
             <td class='btn-box'><input type='submit' class='upl-btn' value='更新'></td>
         </form>

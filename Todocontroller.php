@@ -25,15 +25,9 @@ class Todocontroller extends Controller
         $todo = Todo::find($request->id)->delete();
         return redirect()->route('todo.index');
     }
-    public function edit(Request $request)
-    {
-        Todo::update([
-            'content' => $request->content
-        ]);
-        return view('/', ['content' => $todo]);
-    }
     public function update(Request $request)
     {
+        $this->validate($request, Todo::$rules);
         $todo = Todo::find($request->id);
         $form = $request->all();
         unset($form['_token']);

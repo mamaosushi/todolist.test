@@ -1,4 +1,4 @@
-@extends('layouts.default')  
+@extends('layouts.default')
 <style>
     .item-table th td {
         text-align: center;
@@ -67,10 +67,10 @@
 @endif
 <table class='item-table'>
     <tr>
-        <th>作成日</th>
-        <th>タスク名</th>
-        <th>更新</th>
-        <th>削除</th>
+        <th>作成した日</th>
+        <th>タスクの名前</th>
+        <th>UPDATE</th>
+        <th>DELATE</th>
     </tr>
     @foreach($todos as $todo)
     <tr>

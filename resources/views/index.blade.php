@@ -67,10 +67,10 @@
 @endif
 <table class='item-table'>
     <tr>
-        <th>作成した日</th>
-        <th>タスクの名前</th>
-        <th>UPDATE</th>
-        <th>DELATE</th>
+        <th>作成日</th>
+        <th>タスク名</th>
+        <th>こうしん！</th>
+        <th>さくじょ！</th>
     </tr>
     @foreach($todos as $todo)
     <tr>
